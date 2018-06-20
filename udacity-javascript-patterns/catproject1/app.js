@@ -1,13 +1,29 @@
-var cat = document.getElementById("cat");
-var cat1 = document.getElementById("cat1");
-cat.addEventListener('click', function() {
-    handle("clickCat");
-});
-cat1.addEventListener('click', function() {
-    handle("clickCat1");
-});
+var options = ["select", "cat", "cat1", "cat2"];
+var select = document.createElement("SELECT");
+var element = document.getElementById("select");
+var pushElement = document.getElementById("p")
+for(var i = 0; i < options.length; i++) {
+    var option = document.createElement("option");
+    option.text = options[i];
+    select.add(option);
+}
+
+select.addEventListener('change', function() {
+        handle(select.value);
+    }
+);
+
+element.appendChild(select);
 
 function handle(name) {
-    var clicks = document.getElementById(name);
-    clicks.innerHTML = parseInt(clicks.innerHTML) + 1;
+    pushElement.innerHTML = "";
+    var image = document.createElement("img");
+    image.src = name + ".jpg";
+    var p = document.createElement("p");
+    p.innerHTML = 0;
+    image.addEventListener("click", function() {
+        p.innerHTML = parseInt(p.innerHTML) + 1;
+    });
+    pushElement.appendChild(image);
+    pushElement.appendChild(p);
 } 
