@@ -1,0 +1,36 @@
+body {
+    background-color: gray;
+}
+
+.controls {
+    text-align: center;
+}
+
+.addPizza {
+    margin-top: 10px;
+    width: 190px;
+    background-color: burlywood;
+    height: 36px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.pizza-list {
+    list-style: none;
+    display: inline-block;
+}
+
+.pizza {
+    width: 120px;
+    background-color: burlywood;
+    line-height: 63px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.remove-pizza {
+    color: blanchedalmond;
+    text-decoration: none;
+    border-radius: 3px;
+}
